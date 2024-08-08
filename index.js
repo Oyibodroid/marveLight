@@ -5,7 +5,7 @@ console.log(slideRight);
 
 observerRightSlide = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0.02) {
+    if (entry.intersectionRatio > 0) {
       entry.target.style.animation = `slideUpRight 1.5s ease`;
     } else {
       entry.target.style.animation = `none`;
@@ -20,7 +20,7 @@ slideRight.forEach((slide) => {
 
 observerLeftSlide = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.intersectionRatio > 0.02) {
+    if (entry.intersectionRatio > 0) {
       entry.target.style.animation = `slideUpLeft 1s ease`;
     } else {
       entry.target.style.animation = `none`;

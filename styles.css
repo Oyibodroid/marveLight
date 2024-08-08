@@ -9,19 +9,21 @@ body {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden;
+    background: rgb(14, 14, 29);
+    font-family: 'Jost', sans-serif;
+    color: rgb(199, 199, 199) !important;
 }
 
 #header {
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
-    background: linear-gradient(150deg,
+    /* background: linear-gradient(150deg,
             rgba(239, 252, 255, 0.5),
             rgba(179, 108, 179, 0.164),
             rgba(129, 153, 224, 0.336),
             rgba(65, 105, 225, 0.247)
-            /* rgba(179, 108, 179, 0.247) */
-        );
-    /* position: relative; */
+        ); */
+    position: relative;
     overflow: hidden;
 }
 
@@ -34,6 +36,15 @@ body {
 
 h2 {
     font-weight: 500;
+    margin-bottom: 1em;
+}
+
+#main div {
+    margin: 2rem 0;
+}
+
+h4 {
+    color: rgba(255, 255, 255, 0.267);
 }
 
 .purple {
@@ -49,22 +60,19 @@ img {
     width: 100%;
 }
 
+
 #logo img {
     width: 7rem;
-}
-
-.right-nav {
-    width: 50%;
 }
 
 #links,
 .right-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
 }
 
+/* 
 button {
     background-color: slateblue;
     padding: .9rem 1.3rem;
@@ -74,7 +82,7 @@ button {
     cursor: pointer;
     border-radius: 4px;
     box-shadow: 0px 7px 37px -5px rgba(83, 43, 226, 0.116);
-}
+} */
 
 .strip {
     border: solid 1px slateblue;
@@ -108,20 +116,26 @@ button {
     min-width: 25rem;
 }
 
+#hero-mobi{
+    display: none;
+}
+
 #main {
     width: 100vw;
+    overflow-x: hidden;
+    position: relative;
 }
 
 #bio {
     width: 100%;
     height: 30rem;
     padding: 1rem 10vw;
-    margin: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden visible; */
 }
 
 #bio-left {
@@ -131,7 +145,6 @@ button {
     object-fit: cover;
     border-radius: 8px;
     border: solid 5px #FFFFFF;
-    /* overflow: hidden; */
     position: relative;
 }
 
@@ -146,12 +159,7 @@ button {
     width: 100%;
     height: 100%;
     transition: box-shadow 1s;
-    box-shadow: 2px 1px 1rem #5d5df000;
-}
-
-#bio-left img:hover #bio-left::after {
     box-shadow: 2px 1px 1rem #5d5df0;
-
 }
 
 #bio-left img {
@@ -183,7 +191,7 @@ button {
 
 #service {
     text-align: center;
-    padding: 20vw;
+    padding: 10vw;
     line-height: 1.5;
     position: relative;
     /* overflow-x: hidden; */
@@ -200,22 +208,134 @@ button {
     z-index: -10;
     width: 30rem;
     height: 30rem;
+    margin: 0 !important;
     overflow: hidden;
     border-radius: 50%;
-    filter: blur(170px);
-    /* top: -30%;
-    left: 50%; */
+    filter: blur(200px);
+    top: -30%;
+    left: 90%;
     transform: translate(10%, -50%);
 }
 
-.glow1{
+.glow1 {
     background-color: rgba(47, 120, 255, 0.253);
-    /* top: 30%;
-    left: -50%; */
-    filter: blur(100px);
+    top: 30%;
+    left: -50%;
+    filter: blur(10px);
     transform: translate(100%, -10%);
 }
 
+.card-container {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 10rem;
+    height: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 !important;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+    border: solid 1px rgb(119, 119, 119);
+    transition: .5s ease;
+    border-radius: 4px;
+}
+
+.card:hover {
+    background: #ffffff04;
+    backdrop-filter: blur(150px);
+    cursor: pointer;
+    /* box-shadow: rgba(170, 170, 170, 0.1) 0px 20px 25px -5px, rgba(104, 104, 104, 0.04) 0px 10px 10px -5px; */
+}
+
+.card:active {
+    transform: scale(95%);
+    /* transition: transform 2s ease-in; */
+}
+
+.card:hover h4 {
+    color: white;
+    transition: .6s ease;
+}
+
+.card img {
+    width: 50%;
+}
+
+#skill {
+    text-align: center;
+    width: 100%;
+    /* height: 20rem; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 10vw;
+    background-color: rgba(47, 120, 255, 0.473);
+}
+
+#rangeGrid {
+    width: 100%;
+    background: rgba(14, 14, 29, 0.26);
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.range {
+    background: rgba(255, 255, 255, 0.247);
+    height: 2px;
+    position: relative;
+    width: 100%;
+}
+
+.range p {
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    padding: 1rem 0;
+    justify-content: space-between;
+}
+
+.range span {
+    font-weight: 500;
+}
+
+.range::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: white;
+    z-index: 5;
+    bottom: 0;
+    left: 0%;
+}
+
+#one::after {
+    width: 98%;
+}
+
+#two::after {
+    width: 95%;
+}
+
+#three::after {
+    width: 90%;
+}
+
+#four::after {
+    width: 80%;
+}
 
 @media(max-width: 900px) {
 
@@ -223,6 +343,44 @@ button {
         min-width: 15rem;
     }
 
+}
+
+@media(max-width: 800px){
+
+    #header{
+        margin-bottom: 2rem;
+    }
+
+    #logo img{
+        width: 4rem;
+    }
+
+    #hero{
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    .left-hero{
+        align-items: center;
+    }
+
+    .right-hero{
+        width: 100%;
+    }
+
+    #hero-desk{
+        display: none;
+    }
+
+    #hero-mobi{
+        display: block;
+    }
+
+    #bio{
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 @keyframes slideRight {
@@ -324,22 +482,18 @@ button {
 /* CSS */
 button {
     background: #5E5DF0;
-    border-radius: 100px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
+    border-radius: 10px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
-    font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    opacity: 1;
-    outline: 0 solid transparent;
+    outline: none;
     padding: 8px 18px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     width: fit-content;
-    word-break: break-word;
     border: 0;
 }
+

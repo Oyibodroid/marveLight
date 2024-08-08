@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Folio Port</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./index.js"></script>
   </head>
@@ -13,7 +19,7 @@
     <header id="header">
       <nav id="nav">
         <div id="logo" class="left-nav">
-          <img src="./img/NOMEN.png" alt="nomen" />
+          <img src="./img/light-bulb.png" alt="nomen" />
         </div>
 
         <div class="right-nav">
@@ -44,9 +50,11 @@
           </div>
         </div>
         <div class="right-hero slide-right">
-          <img src="./img/image-hero-desktop.png" alt="" />
+          <img id="hero-desk" src="./img/image-hero-desktop.png" alt="" />
+          <img id="hero-mobi" src="./img/image-hero-mobile.png" alt="">
         </div>
       </div>
+        <div class="glow2"></div>
     </header>
 
     <section id="main">
@@ -86,7 +94,7 @@
       <div id="service">
         <div class="service-content">
           <h4>service</h4>
-          <h1>What I Do</h1>
+          <h2>What I Do</h2>
           <p>
             I am committed to equipping your brand for newer heights and
             opportunities through not just websites but finely tailored user
@@ -94,7 +102,50 @@
           </p>
         </div>
         <div class="glow1"></div>
-        <div class="glow2"></div>
+
+        <div class="card-container">
+          <div class="card">
+            <img src="./img/824.png" alt="" />
+            <h4>Web Dev.</h4>
+          </div>
+          <div class="card">
+            <img src="./img/574.png" alt="" />
+            <h4>Web Insights</h4>
+          </div>
+          <div class="card">
+            <img src="./img/550.png" alt="" />
+            <h4>SEO</h4>
+          </div>
+          <div class="card">
+            <img src="./img/506.png" alt="" />
+            <h4>Revamp</h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="skill">
+        <h4>skills</h4>
+        <h2>Why Choose Me?</h2>
+        <p>
+          Apart from my very robust skillset and expertise, I am well known for
+          delivering a maximum customer satisfaction to all of my customers
+        </p>
+
+        <div id="rangeGrid">
+          <div class="range" id="one">
+            <p>HTML <span>98%</span></p>
+          </div>
+
+          <div class="range" id="two">
+            <p>CSS <span>95%</span></p>
+          </div>
+          <div class="range" id="three">
+            <p>JavaScript <span>90%</span></p>
+          </div>
+          <div class="range" id="four">
+            <p>React <span>80%</span></p>
+          </div>
+        </div>
       </div>
     </section>
   </body>
