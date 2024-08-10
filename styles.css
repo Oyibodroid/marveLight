@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     background: rgb(14, 14, 29);
-    font-family: 'Jost', sans-serif;
+    /* font-family: 'Jost', sans-serif; */
     color: rgb(199, 199, 199) !important;
 }
 
@@ -62,7 +62,7 @@ img {
 
 
 #logo img {
-    width: 7rem;
+    width: 4rem;
 }
 
 #links,
@@ -116,7 +116,7 @@ button {
     min-width: 25rem;
 }
 
-#hero-mobi{
+#hero-mobi {
     display: none;
 }
 
@@ -202,19 +202,26 @@ button {
 }
 
 .glow1,
-.glow2 {
+.glow2,
+.glow3 {
     position: absolute;
-    background-color: rgba(144, 47, 255, 0.418);
+    background-color: rgba(144, 47, 255, 0.39);
     z-index: -10;
     width: 30rem;
     height: 30rem;
     margin: 0 !important;
     overflow: hidden;
     border-radius: 50%;
-    filter: blur(200px);
-    top: -30%;
-    left: 90%;
+    filter: blur(50px);
+    top: 30%;
+    left: 60%;
     transform: translate(10%, -50%);
+}
+
+.glow3{
+    background-color: rgba(255, 208, 0, 0.3);
+    top: 0%;
+    left: 20%;
 }
 
 .glow1 {
@@ -345,39 +352,39 @@ button {
 
 }
 
-@media(max-width: 800px){
+@media(max-width: 800px) {
 
-    #header{
+    #header {
         margin-bottom: 2rem;
     }
 
-    #logo img{
+    #logo img {
         width: 4rem;
     }
 
-    #hero{
+    #hero {
         flex-direction: column-reverse;
         justify-content: center;
         margin: 1rem 0;
     }
 
-    .left-hero{
+    .left-hero {
         align-items: center;
     }
 
-    .right-hero{
+    .right-hero {
         width: 100%;
     }
 
-    #hero-desk{
+    #hero-desk {
         display: none;
     }
 
-    #hero-mobi{
+    #hero-mobi {
         display: block;
     }
 
-    #bio{
+    #bio {
         flex-direction: column;
         height: auto;
     }
@@ -496,4 +503,3 @@ button {
     width: fit-content;
     border: 0;
 }
-
